@@ -13,30 +13,33 @@
 
 	<center><h1>Contador de clicks em botão.</h1></center>
 	<center><h2>Abaixo aparecerá o número de vezes que você clicou no botão:</h2></center>
+
 	<center><h3 id="counter-label">0</h3></center>
 
-	<center><button onclick="somar()" name="button">Clique para adicionar um número acima</button></center>
-	<br/>
-	<center><button onclick="reiniciar()" name="button">Reiniciar</button></center>
+	<center><button onclick="somar()" name="button">Clique para adicionar um número acima</button></center> <!-- Botão para somar mais um na contagem-->
+	<br/> <!-- Quebra de linha-->
+	<center><button onclick="reiniciar()" name="button">Reiniciar</button></center> <!-- Botão para reiniciar a contagem-->
 
 
 </body>
-	<script type="text/javascript">
 
-		var contagem = 0;
+	<script type="text/javascript"> //início de um comentario em JS. Ínicio de um script;
+
+		var contagem = 0; //Variável a ser somada;
 
 		function somar(){
-			updateDisplay(++contagem);
+			atualizarTela(contagem++); //Atualização de display com valor de contagem somado de 1;
 		}
 
 		function reiniciar(){
 			var contagem = 0;
-			updateDisplay(contagem);
+			atualizarTela(contagem); //Declaração do valor 0 para contagem e print do valor 0;
 		}
 
-		function updateDisplay(val) {
-    		document.getElementById("counter-label").innerHTML = val;
+		function atualizarTela(val) { //Função a ser chamada nas outras funções para atualizar tela;
+    		document.getElementById("counter-label").innerHTML = val; //procure o elemento por id entre parenteses no.própriohtml e atribua o valor da variável a ele.
 		}
+
 	</script>
 
 </html>
