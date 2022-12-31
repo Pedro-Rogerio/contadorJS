@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<title>
+		Contador
+	</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+	<center><h1>Contador de clicks em botão.</h1></center>
+	<center><h2>Abaixo aparecerá o número de vezes que você clicou no botão:</h2></center>
+	<center><h3 id="counter-label">0</h3></center>
+
+	<center><button onclick="somar()" name="button">Clique para adicionar um número acima</button></center>
+	<br/>
+	<center><button onclick="reiniciar()" name="button">Reiniciar</button></center>
+
+
+</body>
+	<script type="text/javascript">
+
+		var contagem = 0;
+
+		function somar(){
+			updateDisplay(++contagem);
+		}
+
+		function reiniciar(){
+			var contagem = 0;
+			updateDisplay(contagem);
+		}
+
+		function updateDisplay(val) {
+    		document.getElementById("counter-label").innerHTML = val;
+		}
+	</script>
+
+</html>
